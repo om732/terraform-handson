@@ -1,0 +1,2 @@
+*.tfstate*
+aws.tf
