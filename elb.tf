@@ -7,7 +7,7 @@ resource "aws_elb" "terraform_handson_elb" {
     name = "terraform-handson-elb"
     subnets = [
         "${aws_subnet.terraform_handson_public_subnet_a.id}",
-        "${aws_subnet.terraform_handson_public_subnet_c.id}",
+        "${aws_subnet.terraform_handson_public_subnet_c.id}"
     ]
     security_groups = ["${aws_security_group.terraform_handson_elb_sg.id}"]
 
@@ -28,7 +28,7 @@ resource "aws_elb" "terraform_handson_elb" {
 
     instances = [
         "${aws_instance.terraform_handson_instance_a.id}",
-        "${aws_instance.terraform_handson_instance_c.id}",
+        "${aws_instance.terraform_handson_instance_c.id}"
     ]
     cross_zone_load_balancing = true
     idle_timeout = 60
